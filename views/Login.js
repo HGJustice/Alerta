@@ -1,7 +1,7 @@
 // HomeScreen.js
 import React from "react";
 import { StatusBar, StyleSheet, Text, View } from "react-native";
-import CustomButton from "../components/CustomButton";
+import CustomButton from "../components/0_Atoms/Buttons/CustomButton";
 import CustomInput from "../components/CustomInput";
 
 const HomeScreen = ({ navigation }) => {

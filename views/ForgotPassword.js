@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
-import CustomButton from "../components/CustomButton";
+import CustomButton from "../components/0_Atoms/Buttons/CustomButton";
 import CustomInput from "../components/CustomInput";
 
 function ForgotPasswordScreen({ navigation }) {
