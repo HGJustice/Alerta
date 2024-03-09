@@ -7,21 +7,15 @@ import CustomInput from "../components/CustomInput";
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.app__header}>Stay Safe</Text>
-      <CustomInput placeholder={"Login"} style={styles.loginStyle} />
-      <CustomInput placeholder={"Password"} style={styles.loginStyle} />
+      <Text> Zaloguj sie</Text>
+      <CustomButton />
       <CustomButton
-        style={styles.loginButton}
-        title={"Login"}
-        onPress={() => navigation.navigate("Dashboard")}
+        title={"Zaloguj sie za pomoca Google"}
+        style={styles.HomeScreen__button}
       />
       <CustomButton
-        title={"Forgot Password?"}
-        onPress={() => navigation.navigate("ForgotPassword")}
-      />
-      <CustomButton
-        title={"Don't have an account? Create here"}
-        onPress={() => navigation.navigate("Register")}
+        title={"Uzyj adresu e-mail"}
+        style={styles.HomeScreen__button}
       />
       <StatusBar style="auto" />
     </View>
@@ -53,13 +47,14 @@ const styles = StyleSheet.create({
     width: 200,
     textAlign: "center",
   },
-  loginButton: {
-    height: 45,
+  HomeScreen__button: {
     borderWidth: 1,
     padding: 10,
-    width: 100,
+    height: 62,
+    width: 311,
     borderRadius: 30,
     textAlign: "center",
+    justifyContent: "center",
   },
 });
 
