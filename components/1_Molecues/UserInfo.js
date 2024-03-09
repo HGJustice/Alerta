@@ -5,17 +5,10 @@ import { View, Text, StyleSheet } from "react-native";
 import CustomButton from "../0_Atoms/Buttons/CustomButton";
 
 
-export default function UserInfo({ navigation }) {
+export default function UserInfo({ title }) {
   return (
     <View style={styles.UserInfo}>
-      <CustomButton
-        title={"TEST BUTTON"}
-        style={styles.HomeScreen__button}
-        // onPress={() =>
-        //   navigation.navigate('Login')
-        // }
-      />
-
+      <Text>{title}</Text>
     </View>
   )
 }
