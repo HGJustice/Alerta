@@ -14,7 +14,7 @@ function HomePage({ navigation }) {
     <View style={styles.HomePage}>
       <Login navigation={navigation}/>
       <UserInfo navigation={navigation}/>
-        <Map />
+      <Map />
     </View>
   );
 }

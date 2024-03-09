@@ -24,6 +24,7 @@ export default function UserInfo({ navigation }) {
 
 const styles = StyleSheet.create({
   UserInfo: {
+    zIndex: 1,
     height: '50%',
     backgroundColor: '#fff',
     padding: 30,
