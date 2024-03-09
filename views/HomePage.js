@@ -1,6 +1,11 @@
 // HomeScreen.js
-import React from "react";
 
+import React, { useState } from "react";
+
+import GetLocation from "../components/GetLocation";
+
+import krystianImg from "../assets/krystian.jpg";
+import katarinaImg from "../assets/kararinaBlyat.jpg";
 
 import Map from "../components/Map";
 import { View, Text, StyleSheet, SafeAreaView } from "react-native";
@@ -10,11 +15,29 @@ import Login from '../components/Login'
 
 
 function HomePage({ navigation }) {
+  
+   const [currentLocation, setCurrentLocation] = useState({
+    // latitude: 52.230476,
+    // longitude: 20.9790455,
+    latitude: null,
+    longitude: null,
+    img: katarinaImg,
+  });
+
+  const [stranger, setStranger] = useState({
+    latitude: 52.230476,
+    longitude: 20.9790452,
+    img: krystianImg,
+  });
+
+  
   return (
     <View style={styles.HomePage}>
       <Login navigation={navigation}/>
       <UserInfo navigation={navigation}/>
-      <Map />
+      <Map currentLocation={currentLocation} stranger={stranger} />
+      <GetLocation setCurrentLocation={setCurrentLocation} />
+
     </View>
   );
 }
