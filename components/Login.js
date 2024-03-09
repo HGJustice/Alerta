@@ -17,7 +17,7 @@ const HomeScreen = ({ navigation }) => {
       backgroundColor: "#fff",
       alignItems: "center",
       justifyContent: "center",
-      position: "fixed",
+      position: "absolute",
       left: 0,
       top: isLoginOpen ? '0' : '100%',
       width: '100%',
