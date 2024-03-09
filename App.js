@@ -1,35 +1,35 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./views/Login";
-import DashboardScreen from "./views/HomePage";
-import RegisterScreen from "./views/Register";
-import ForgotPasswordScreen from "./views/ForgotPassword";
+import Login from "./components/Login";
+import HomePage from "./views/HomePage";
+import Register from "./views/Register";
+import ForgotPassword from "./views/ForgotPassword";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
+      <Stack.Navigator initialRouteName="HomePage">
+        {/* <Stack.Screen
+          name="Login"
+          component={Login}
           options={{ headerShown: false }}
-        />
+        /> */}
         <Stack.Screen
           name="Register"
-          component={RegisterScreen}
+          component={Register}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Dashboard"
-          component={DashboardScreen}
+          name="HomePage"
+          component={HomePage}
           options={{ headerShown: false }}
         />
         <Stack.Screen
           name="ForgotPassword"
-          component={ForgotPasswordScreen}
+          component={ForgotPassword}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
