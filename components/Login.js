@@ -3,10 +3,17 @@ import React, {useState} from "react";
 import { Animated, StatusBar, StyleSheet, Text, View } from "react-native";
 import CustomButton from "./0_Atoms/Buttons/CustomButton";
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ setViewType }) => {
   const [isLoginOpen, setIsLoginOpen] = useState(true);
 
-  const closeLoginPanel = () => {
+  const closeLoginPanel = (view) => {
+   
+    if(view == 'view1') {
+      setViewType('view1')
+    }
+    if(view == 'view2') {
+      setViewType('view2')
+    }
     setIsLoginOpen(!isLoginOpen)
   }
 
@@ -54,20 +61,21 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text> Zaloguj sie</Text>
+      <Text> Zaloguj sie / Wybierz widok</Text>
       <CustomButton />
       <CustomButton
-        title={"Zaloguj sie za pomoca Google"}
+        // title={"Zaloguj sie za pomoca Google"}
+        title={'View 1'}
         style={styles.HomeScreen__button}
         onPress={() =>
-          closeLoginPanel()
+          closeLoginPanel('view1')
         }
       />
       <CustomButton
-        title={"Uzyj adresu e-mail"}
+        title={"View 2"}
         style={styles.HomeScreen__button}
         onPress={() =>
-          closeLoginPanel()
+          closeLoginPanel('view2')
         }
       />
       <StatusBar style="auto" />
