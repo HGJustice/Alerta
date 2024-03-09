@@ -1,17 +1,34 @@
 // HomeScreen.js
 import React from "react";
-import { View, Text } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import Map from "../components/Map";
 
-function DashboardScreen() {
+
+import Map from "../components/Map";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import CustomButton from "../components/0_Atoms/Buttons/CustomButton";
+import UserInfo from '../components/1_Molecues/UserInfo'
+import Login from '../components/Login'
+
+
+function HomePage({ navigation }) {
   return (
-    <SafeAreaView>
-      <View>
+    <View style={styles.HomePage}>
+      <Login navigation={navigation}/>
+      <UserInfo navigation={navigation}/>
         <Map />
-      </View>
-    </SafeAreaView>
+    </View>
   );
 }
 
-export default DashboardScreen;
+
+const styles = StyleSheet.create({
+  HomePage: {
+    width: '100%',
+    height: '100%',
+    flex: 1,
+    position: 'relative',
+    backgroundColor: '#ccc'
+  },
+});
+
+
+export default HomePage;
