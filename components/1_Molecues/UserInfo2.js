@@ -1,14 +1,5 @@
-import React, { useState } from "react";
-import {
-  Alert,
-  Button,
-  Image,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import React, {useState} from "react";
+import {Alert, Image, StyleSheet, Text, TouchableOpacity, View,} from "react-native";
 import queryOpenAI from "../Apis/openAIQuery";
 import katarinaImg from "../../assets/kararinaBlyat.jpg"; // Asumując, że ścieżka jest poprawna
 
@@ -174,7 +165,7 @@ export default function UserInfo2() {
                 fontWeight: "bold",
               }}
             >
-              Gdzie jest AED
+              Najbliższy AED
             </Text>
             {/* <Button
               title="Gdzie jest AED"
