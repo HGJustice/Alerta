@@ -18,7 +18,7 @@ export default function UserInfo({ title }) {
 const styles = StyleSheet.create({
   UserInfo: {
     zIndex: 1,
-    height: '50%',
+    height: '30%',
     backgroundColor: '#fff',
     padding: 30,
     width: '100%',
