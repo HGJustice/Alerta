@@ -1,6 +1,6 @@
 // HomeScreen.js
 import React, {useState} from "react";
-import { Animated, StatusBar, StyleSheet, Text, View } from "react-native";
+import {StatusBar, StyleSheet, Text, View} from "react-native";
 import CustomButton from "./0_Atoms/Buttons/CustomButton";
 
 const HomeScreen = ({ setViewType }) => {
@@ -65,14 +65,14 @@ const HomeScreen = ({ setViewType }) => {
       <CustomButton />
       <CustomButton
         // title={"Zaloguj sie za pomoca Google"}
-        title={'View 1'}
+        title={'Widok osoby potrzebującej pomocy'}
         style={styles.HomeScreen__button}
         onPress={() =>
           closeLoginPanel('view1')
         }
       />
       <CustomButton
-        title={"View 2"}
+        title={"Widok osoby, która chce pomóc"}
         style={styles.HomeScreen__button}
         onPress={() =>
           closeLoginPanel('view2')
