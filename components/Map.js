@@ -14,7 +14,7 @@ function Map({ currentLocation, stranger }) {
   // });
 
   const [initialRegion, setInitialRegion] = useState({
-    latitude: 52.2105,
+    latitude: 50.2105,
     longitude: 20.8279,
     latitudeDelta: 5,
     longitudeDelta: 5,

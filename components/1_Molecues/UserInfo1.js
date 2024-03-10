@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 // import CustomButton from "../0_Atoms/Buttons/CustomButton";
 // import katarinaImg from "../assets/kararinaBlyat.jpg";
 import katarinaImg from "../../assets/kararinaBlyat.jpg";
@@ -15,7 +15,8 @@ export default function UserInfo1() {
 
   const helpBtn = helpBtnArr.map((item) => {
     return (
-      <View
+      <TouchableOpacity
+        key={item}
         style={{
           height: btnHeight,
           borderWidth,
@@ -27,7 +28,7 @@ export default function UserInfo1() {
         }}
       >
         <Text style={{ fontSize: 20, color: COLOR.red }}>{item}</Text>
-      </View>
+      </TouchableOpacity>
     );
   });
 
@@ -82,7 +83,7 @@ export default function UserInfo1() {
 
       <View style={{ flexDirection: "row", gap: 20 }}>{biometricData}</View>
 
-      <View
+      <TouchableOpacity
         style={{
           width: "100%",
           height: btnHeight,
@@ -97,7 +98,7 @@ export default function UserInfo1() {
         <Text style={{ fontSize: 20, fontWeight: "bold", color: COLOR.red }}>
           {seconds > 0 ? `${seconds}s ANULUJ WEZWANIE` : "Wezwano pomoc"}
         </Text>
-      </View>
+      </TouchableOpacity>
 
       <View
         style={{
@@ -110,7 +111,7 @@ export default function UserInfo1() {
         {helpBtn}
       </View>
 
-      <View
+      <TouchableOpacity
         style={{
           width: "100%",
           padding: 10,
@@ -152,7 +153,7 @@ export default function UserInfo1() {
             112
           </Text>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }
