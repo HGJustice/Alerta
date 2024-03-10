@@ -8,13 +8,10 @@ import krystianImg from "../assets/krystian.jpg";
 import katarinaImg from "../assets/kararinaBlyat.jpg";
 
 import Map from "../components/Map";
-import UserInfo from '../components/1_Molecues/UserInfo'
-
+import UserInfo2 from "../components/1_Molecues/UserInfo2";
 
 function View2() {
-
-  
-   const [currentLocation, setCurrentLocation] = useState({
+  const [currentLocation, setCurrentLocation] = useState({
     // latitude: 52.230476,
     // longitude: 20.9790455,
     latitude: null,
@@ -28,14 +25,12 @@ function View2() {
     img: krystianImg,
   });
 
-
-  
   return (
-      <>
-        <UserInfo title={'view2'}/>
-        <Map currentLocation={currentLocation} stranger={stranger} />
-        <GetLocation setCurrentLocation={setCurrentLocation} />
-      </>
+    <>
+      <UserInfo2 />
+      <Map currentLocation={currentLocation} stranger={stranger} />
+      <GetLocation setCurrentLocation={setCurrentLocation} />
+    </>
   );
 }
 

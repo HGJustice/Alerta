@@ -10,17 +10,14 @@ import katarinaImg from "../assets/kararinaBlyat.jpg";
 import Map from "../components/Map";
 import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 import CustomButton from "../components/0_Atoms/Buttons/CustomButton";
-import UserInfo from '../components/1_Molecues/UserInfo'
-import Login from '../components/Login'
+import Login from "../components/Login";
 import View1 from "./View1";
 import View2 from "./View2";
 
-
 function HomePage({ navigation }) {
-  const [viewType, setViewType] = useState('login')
+  const [viewType, setViewType] = useState("login");
 
-  
-   const [currentLocation, setCurrentLocation] = useState({
+  const [currentLocation, setCurrentLocation] = useState({
     // latitude: 52.230476,
     // longitude: 20.9790455,
     latitude: null,
@@ -34,40 +31,36 @@ function HomePage({ navigation }) {
     img: krystianImg,
   });
 
-
-  
   return (
     <View style={styles.HomePage}>
-      <Login setViewType={setViewType}/>
+      <Login setViewType={setViewType} />
 
       {/* View 1 */}
       {/* pojawia się na podstawie wyboru z loginu */}
 
-      { viewType === 'view1' &&
-      <>
-        <View1 />
-      </>}
+      {viewType === "view1" && (
+        <>
+          <View1 />
+        </>
+      )}
 
-      { viewType === 'view2' &&
-      <>
-        <View2 />
-      </>}
-
-
+      {viewType === "view2" && (
+        <>
+          <View2 />
+        </>
+      )}
     </View>
   );
 }
 
-
 const styles = StyleSheet.create({
   HomePage: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
     flex: 1,
-    position: 'relative',
-    backgroundColor: '#ccc'
+    position: "relative",
+    backgroundColor: "#ccc",
   },
 });
-
 
 export default HomePage;

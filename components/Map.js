@@ -4,6 +4,7 @@ import { SafeAreaView, View, Text, StyleSheet, Image } from "react-native";
 // import krystianImg from "../assets/krystian.jpg";
 
 import MapView, { Marker } from "react-native-maps";
+import Directions from "react-native-maps-directions";
 
 function Map({ currentLocation, stranger }) {
   // const [stranger, setStranger] = useState({
@@ -94,11 +95,11 @@ export default Map;
 const styles = StyleSheet.create({
   map: {
     zIndex: 0,
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     left: 0,
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
     flex: 1,
   },
 });
